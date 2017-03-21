@@ -1,2 +1,2 @@
-# A simple Vue.js Application
+# A Simple Vue.js Application
 A simple Vue.js application
