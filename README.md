@@ -2,7 +2,7 @@
 
 It's a simple application that you can use to learn a litle bit about Vue.js 
 
-I used some CND and resources like JSONPlaceholder (to get some fake data):
+I used some CDN and resources like JSONPlaceholder (to get some fake data):
 
 * https://unpkg.com/vue@2.2.4 (Vue.js 2.x)
 * https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js (Vue Resource)
