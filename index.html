@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS + JSONPlaceholder</title>
+    <script src="https://unpkg.com/vue@2.2.4"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.2.1/vue-resource.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/d87f30f392.js"></script>
+</head>
+<body>
+    <div class="container"></br>
+        <div class="row" id="app">
+          <div class="col-xs-12 col-md-12">
+                <p>
+                    <a class="btn btn-success btn-lg" @click.prevent="show_users()" href="#" role="button" v-if="!users.length">LOAD USERS
+                        <i class="fa fa-refresh" aria-hidden="true" v-if="!inProgress"></i>
+                        <i class="fa fa-cog fa-spin fa-lg fa-fw" v-if="inProgress"></i>
+                    </a>
+                    <a class="btn btn-danger btn-lg" @click.prevent="clear_users()" v-if="users.length" href="#" role="button">CLEAR USERS <i class="fa fa-trash" aria-hidden="true"></i></a>
+                </p>
+
+                <ul class="list-group" v-show="users">
+                    <li class="list-group-item" v-for="(user, index) in users">
+                        <p>
+                            {{user.id}}. {{user.name}} <span class="badge">{{user.username}}</span>
+                            <a href="#" class="pull-right" @click.prevent="delete_user(index, user)">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </li>
+                </ul>
+
+                <pre>{{users | json}}</pre>
+                <pre>{{status | json}}</pre>
+          </div>
+        </div>
+    </div>
+
+    <script src="js/vue.js" charset="utf-8"></script>
+</body>
+</html>
