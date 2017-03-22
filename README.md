@@ -1,3 +1,5 @@
+# Simple Vue.js Application
+
 It's a simple application that you can use to learn a litle bit about Vue.js 
 
 I used some CND and resources like JSONPlaceholder (to get some fake data):
